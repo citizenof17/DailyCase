@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">DailyCase</string>
+    <string name="titleHint">Title</string>
+    <string name="descriptionHint">Describe</string>
+    <string name="Add">Add</string>
+    <string name="cancel">Cancel</string>
+</resources>
