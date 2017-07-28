@@ -5,5 +5,5 @@
     <color name="colorAccent">#FF4081</color>
     <color name="colorImagesBackground">#f5f5f5</color>
     <color name="colorCasesBackground">#fdfdfd</color>
-    <color name="colorCaseBackground1">#fffbfb</color>
+    <color name="colorCaseBackground1">#fffafb</color>
 </resources>

@@ -17,7 +17,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String COLUMN_ID = "_id";
     public static final String COLUMN_TITLE = "title";
     public static final String COLUMN_DESCRIPTION = "description";
-
+    public static final String COLUMN_DATE = "date";
 
     public DatabaseHelper(Context context){
         super(context, DATABASE_NAME, null, SCHEMA);
@@ -27,15 +27,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("CREATE TABLE cases (" + COLUMN_ID
             + " INTEGER PRIMARY KEY AUTOINCREMENT," + COLUMN_TITLE
-            + " TEXT, " + COLUMN_DESCRIPTION + " TEXT);");
-//        db.execSQL("INSERT INTO "+ TABLE +" (" + COLUMN_TITLE
-//                + ", " + COLUMN_DESCRIPTION  + ") VALUES ('Test Case', 'This case is made for test');");
-
+            + " TEXT, " + COLUMN_DESCRIPTION + " TEXT, " + COLUMN_DATE + " TEXT);");
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL("DROP TABLE IF EXISTS "+TABLE);
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE);
         onCreate(db);
     }
 }

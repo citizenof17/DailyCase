@@ -3,9 +3,6 @@ package my.dailycase;
 import android.app.Activity;
 import android.app.DialogFragment;
 
-/**
- * Created by Pavel on 20.04.2017.
- */
 
 public class NoticeDialogFragment extends DialogFragment {
 
