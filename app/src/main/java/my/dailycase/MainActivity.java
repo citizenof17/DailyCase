@@ -13,6 +13,7 @@ import android.net.Uri;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
@@ -81,9 +82,11 @@ public class MainActivity extends AppCompatActivity {
             TextView title = new TextView(this);
             title.setId(100000000);
             relativeLayout.setId(userCursor.getInt(0));
-            title.setText("Что: " + userCursor.getString(1));
-            title.setMaxEms(10);
-            title.setMaxLines(1);
+            title.setText("Case: " + userCursor.getString(1));
+            title.setSingleLine(true);
+            title.setEllipsize(TextUtils.TruncateAt.END);
+//            title.setMaxEms(10);
+//            title.setMaxLines(1);
 
             RelativeLayout.LayoutParams titleParams = new RelativeLayout.LayoutParams(
                     RelativeLayout.LayoutParams.WRAP_CONTENT,
@@ -93,14 +96,16 @@ public class MainActivity extends AppCompatActivity {
 
             //date param
             TextView date = new TextView(this);
-            date.setText("Когда: " + userCursor.getString(3));
+            date.setText("Date: " + userCursor.getString(3));
 
             RelativeLayout.LayoutParams dateParams = new RelativeLayout.LayoutParams(
                     RelativeLayout.LayoutParams.WRAP_CONTENT,
                     RelativeLayout.LayoutParams.WRAP_CONTENT
             );
-            date.setMaxEms(10);
-            date.setMaxLines(1);
+            date.setSingleLine(true);
+            date.setEllipsize(TextUtils.TruncateAt.END);
+//            date.setMaxEms(10);
+//            date.setMaxLines(1);
             dateParams.addRule(RelativeLayout.BELOW, title.getId());
             relativeLayout.addView(date, dateParams);
 
